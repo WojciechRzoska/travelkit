@@ -1,4 +1,4 @@
-import { COLORS } from '@/assets/theme/colors';
+import { COLORS } from 'assets/theme/colors';
 import * as NavigationBar from 'expo-navigation-bar';
 import { useColorScheme as useNativewindColorScheme } from 'nativewind';
 import * as React from 'react';
