@@ -2,10 +2,7 @@ import Text from '@components/Text';
 import React from 'react';
 import { View } from 'react-native';
 
-export const options = {
-  title: 'Zaloguj się 👋',
-};
-const AuthenticationView = () => {
+const HomeView = () => {
   return (
     <View
       style={{
@@ -14,9 +11,9 @@ const AuthenticationView = () => {
         alignItems: 'center',
       }}
     >
-      <Text>Edit </Text>
+      <Text>Home </Text>
     </View>
   );
 };
 
-export default AuthenticationView;
+export default HomeView;
