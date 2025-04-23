@@ -1,4 +1,4 @@
-import API from '@/api/client';
+import API from '@api/client';
 import * as SecureStore from 'expo-secure-store';
 
 const logout = async (userId: number) => {

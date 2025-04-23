@@ -1,7 +1,7 @@
-import getRefreshToken from '@/api/auth/actions/getRefreshToken';
-import login from '@/api/auth/actions/login';
-import logout from '@/api/auth/actions/logout';
-import { AuthState } from '@/store/authStore/types/AuthState';
+import getRefreshToken from '@api/auth/actions/getRefreshToken';
+import login from '@api/auth/actions/login';
+import logout from '@api/auth/actions/logout';
+import { AuthState } from '@store/authStore/types/AuthState';
 import * as SecureStore from 'expo-secure-store';
 import { create } from 'zustand';
 

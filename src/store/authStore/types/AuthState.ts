@@ -1,4 +1,4 @@
-import { User } from '@/store/authStore/types/User';
+import { User } from '@store/authStore/types/User';
 
 type AuthState = {
   user: User | null;

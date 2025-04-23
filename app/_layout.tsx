@@ -1,4 +1,4 @@
-import { useAuth } from '@/store/authStore';
+import { useAuth } from '@store/authStore';
 import Splash from 'app/splash';
 import { Slot, useRouter } from 'expo-router';
 import { useEffect } from 'react';

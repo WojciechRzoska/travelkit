@@ -6,7 +6,9 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@views/*": ["src/views/*"],
-      "@/*": ["src/*"]
+      "@store/*": ["src/store/*"],
+      "@api/*": ["src/api/*"],
+      "@/*": ["*"]
     }
   },
   "include": [
