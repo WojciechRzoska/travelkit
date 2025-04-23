@@ -1,9 +1,9 @@
 import { useAuth } from '@/store/authStore';
 import Splash from 'app/splash';
-import { Slot, SplashScreen, useRouter } from 'expo-router';
+import { Slot, useRouter } from 'expo-router';
 import { useEffect } from 'react';
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
+import '../assets/global.css';
+
 const RootLayout = () => {
   const {
     refreshSession,

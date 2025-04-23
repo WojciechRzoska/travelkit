@@ -1,9 +1,8 @@
-import Text from '@components/Text';
 import React from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 
 export const options = {
-  title: 'Zaloguj się 👋',
+  title: 'Zaloguj się',
 };
 const AuthenticationView = () => {
   return (
