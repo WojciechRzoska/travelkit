@@ -1,9 +1,7 @@
+import { Input } from '@/lib/components/ui/input';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-export const options = {
-  title: 'Zaloguj się',
-};
 const AuthenticationView = () => {
   return (
     <View
@@ -13,7 +11,12 @@ const AuthenticationView = () => {
         alignItems: 'center',
       }}
     >
-      <Text>Edit </Text>
+      <Input
+        placeholder="Write some stuff..."
+        onChangeText={() => {}}
+        aria-labelledby="inputLabel"
+        aria-errormessage="inputError"
+      />
     </View>
   );
 };

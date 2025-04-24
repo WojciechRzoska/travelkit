@@ -2,7 +2,7 @@ import { useAuth } from '@store/authStore';
 import Splash from 'app/splash';
 import { Slot, useRouter } from 'expo-router';
 import { useEffect } from 'react';
-import '../assets/global.css';
+import '../global.css';
 
 const RootLayout = () => {
   const {
