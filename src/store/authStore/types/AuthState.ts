@@ -4,12 +4,10 @@ type AuthState = {
   user: User | null;
   isAuthenticated: boolean;
   isAuthenticatedLoading: boolean;
+  setIsAuthenticated: (isAuthenticated: boolean) => void;
   setUser: (user: User) => void;
   setIsAuthenticatedLoading: (isLoading: boolean) => void;
   clear: VoidFunction;
-  refreshSession: () => Promise<void>;
-  login: (identifier: string, password: string) => Promise<void>;
-  logout: (userId: number) => Promise<void>;
 };
 
 export type { AuthState };

@@ -1,3 +1,4 @@
+import Endpoints from '@api/auth/Endpoints';
 import API from '@api/client';
 import * as SecureStore from 'expo-secure-store';
 

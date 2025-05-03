@@ -8,7 +8,7 @@ export default function AppLayout() {
 
   useEffect(() => {
     if (!isAuthenticated && !isAuthenticatedLoading) {
-      router.replace('/authentication');
+      router.replace('/signIn');
     }
   }, [isAuthenticated]);
 

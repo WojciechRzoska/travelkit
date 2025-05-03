@@ -4,8 +4,8 @@ import { ConfigContext, ExpoConfig } from 'expo/config';
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  slug: 'travelkit',
-  name: 'travelkit',
+  slug: 'TravelKit',
+  name: 'TravelKit',
   extra: {
     apiUrl: process.env.API_URL,
   },

@@ -3,3 +3,5 @@ const Endpoints = {
   register: '/auth/register',
   logout: '/auth/logout',
 };
+
+export default Endpoints;

@@ -4,46 +4,64 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    /* Główne kolory marki */
+    --background: 210 100% 97%; /* #EEF6FB – bardzo jasny błękit */
+    --foreground: 220 24% 20%; /* #2C3E50 – ciemny granatowy tekst */
+
+    --primary: 210 80% 48%; /* #3498DB – jasny niebieski akcent */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF – biały tekst na niebieskim */
+
+    --accent: 200 100% 85%; /* #D6F0FD – bardzo jasny błękit */
+    --accent-foreground: 220 24% 20%; /* #2C3E50 */
+
+    --muted: 210 40% 85%; /* #C5DFF5 – przygaszony niebieski */
+    --muted-foreground: 220 24% 20%; /* #2C3E50 */
+
+    /* Reszta UI – karta, popovery, itp. */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 220 24% 20%; /* #2C3E50 */
+
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 220 24% 20%; /* #2C3E50 */
+
+    --secondary: 210 60% 95%; /* #EAF6FB – delikatne tło (jasny błękit) */
+    --secondary-foreground: 220 24% 20%; /* #2C3E50 */
+
+    --destructive: 0 84% 60%; /* #E5484D – ostrzegawcza czerwień */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --border: 210 40% 90%; /* #D4E6F1 – lekki błękit na obramowania */
+    --input: 210 40% 90%; /* #D4E6F1 */
+    --ring: 210 80% 48%; /* #3498DB */
   }
 
   .dark:root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --background: 220 24% 12%; /* #172A3A – ciemny granat */
+    --foreground: 210 40% 85%; /* #D4E6F1 – jasny błękitny tekst */
+
+    --primary: 210 80% 60%; /* #5DADE2 – jasny niebieski */
+    --primary-foreground: 220 24% 12%; /* #172A3A */
+
+    --accent: 210 40% 30%; /* #2C3E50 – ciemny niebieski */
+    --accent-foreground: 210 40% 85%; /* #D4E6F1 */
+
+    --muted: 210 20% 25%; /* #2A3C50 – stłumiony granat */
+    --muted-foreground: 210 40% 85%; /* #D4E6F1 */
+
+    --card: 220 24% 16%; /* #1B2B3B */
+    --card-foreground: 210 40% 85%; /* #D4E6F1 */
+
+    --popover: 220 24% 16%; /* #1B2B3B */
+    --popover-foreground: 210 40% 85%; /* #D4E6F1 */
+
+    --secondary: 220 20% 20%; /* #233344 */
+    --secondary-foreground: 210 40% 85%; /* #D4E6F1 */
+
+    --destructive: 0 70% 50%; /* #D03434 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+
+    --border: 220 24% 28%; /* #304456 */
+    --input: 220 24% 28%; /* #304456 */
+    --ring: 210 80% 60%; /* #5DADE2 */
   }
 }

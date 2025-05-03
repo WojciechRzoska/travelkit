@@ -1,42 +1,15 @@
-import { useAuth } from '@store/authStore';
-import Splash from 'app/splash';
-import { Slot, useRouter } from 'expo-router';
-import { useEffect } from 'react';
+// app/_layout.tsx
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Slot } from 'expo-router';
 import '../global.css';
 
 const RootLayout = () => {
-  const {
-    refreshSession,
-    isAuthenticated,
-    setIsAuthenticatedLoading,
-    isAuthenticatedLoading,
-  } = useAuth();
-  const router = useRouter();
+  const queryClient = new QueryClient();
 
-  useEffect(() => {
-    const bootstrap = async () => {
-      await refreshSession();
-      setIsAuthenticatedLoading(false);
-    };
-
-    bootstrap();
-  }, []);
-
-  useEffect(() => {
-    if (!isAuthenticatedLoading) {
-      if (isAuthenticated) {
-        router.replace('/home');
-      } else {
-        router.replace('/authentication');
-      }
-    }
-  }, [isAuthenticatedLoading, isAuthenticated]);
-
-  if (isAuthenticatedLoading) {
-    return <Splash />;
-  }
-
-  return <Slot />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Slot />
+    </QueryClientProvider>
+  );
 };
-
 export default RootLayout;
