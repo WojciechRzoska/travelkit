@@ -1,15 +1,28 @@
-import { Text, View } from "react-native";
+import useInitializeAuth from '@/src/hooks/useInitializeAuth'
+import { useAuth } from '@store/authStore'
+import Splash from 'app/splash'
+import { useRouter } from 'expo-router'
+import { useEffect } from 'react'
+const Index = () => {
+  const initializeAuth = useInitializeAuth()
+  const { isAuthenticated, isAuthenticatedLoading } = useAuth()
+  const router = useRouter()
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  useEffect(() => {
+    initializeAuth()
+  }, [])
+
+  useEffect(() => {
+    if (!isAuthenticatedLoading) {
+      if (isAuthenticated) {
+        router.replace('/home')
+      } else {
+        router.replace('/signIn')
+      }
+    }
+  }, [isAuthenticatedLoading, isAuthenticated])
+
+  return <Splash />
 }
+
+export default Index
