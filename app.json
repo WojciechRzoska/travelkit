@@ -40,6 +40,12 @@
           "configureAndroidBackup": true,
           "faceIDPermission": "Allow travelkit to access your Face ID biometric data."
         }
+      ],
+      [
+        "expo-asset",
+        {
+          "assets": ["./assets/images/app-icon.png"]
+        }
       ]
     ],
     "experiments": {

@@ -3,7 +3,6 @@ import { Text } from '@/lib/components/ui/text'
 import { H1 } from '@/lib/components/ui/typography'
 import AuthMode from '@/src/enums/AuthMode'
 import createUser from '@api/auth/actions/createUser'
-import appIcon from '@assets/images/appIcon.png'
 import InputController from '@components/FormInputs/InputController/InputController'
 import { zodResolver } from '@hookform/resolvers/zod'
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -58,10 +57,14 @@ const SignUpView: FunctionComponent = () => {
     <FormProvider {...form}>
       <View className="bg-background flex-1 items-center justify-center gap-4 p-10">
         <View className="w-60 h-60">
-          <Image source={appIcon} className="w-full h-full object-contain" />
+          <Image
+            source={{ uri: 'app-icon' }}
+            className="w-full h-full object-contain"
+          />
         </View>
         <H1>TravelKit</H1>
-        <InputController fieldName="identifier" placeholder="Email" />
+        <InputController fieldName="username" placeholder="Nazwa użytkownika" />
+        <InputController fieldName="email" placeholder="Email" />
         <InputController
           fieldName="password"
           placeholder="Hasło"
