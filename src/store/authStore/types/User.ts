@@ -1,6 +1,6 @@
 type User = {
-  userId: number;
-  username: string;
-};
+  userId: number
+  username: string
+}
 
-export type { User };
+export type { User }

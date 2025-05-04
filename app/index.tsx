@@ -1,28 +1,28 @@
-import useInitializeAuth from '@/src/hooks/useInitializeAuth';
-import { useAuth } from '@store/authStore';
-import Splash from 'app/splash';
-import { useRouter } from 'expo-router';
-import { useEffect } from 'react';
+import useInitializeAuth from '@/src/hooks/useInitializeAuth'
+import { useAuth } from '@store/authStore'
+import Splash from 'app/splash'
+import { useRouter } from 'expo-router'
+import { useEffect } from 'react'
 const Index = () => {
-  const initializeAuth = useInitializeAuth();
-  const { isAuthenticated, isAuthenticatedLoading } = useAuth();
-  const router = useRouter();
+  const initializeAuth = useInitializeAuth()
+  const { isAuthenticated, isAuthenticatedLoading } = useAuth()
+  const router = useRouter()
 
   useEffect(() => {
-    initializeAuth();
-  }, []);
+    initializeAuth()
+  }, [])
 
   useEffect(() => {
     if (!isAuthenticatedLoading) {
       if (isAuthenticated) {
-        router.replace('/home');
+        router.replace('/home')
       } else {
-        router.replace('/signIn');
+        router.replace('/signIn')
       }
     }
-  }, [isAuthenticatedLoading, isAuthenticated]);
+  }, [isAuthenticatedLoading, isAuthenticated])
 
-  return <Splash />;
-};
+  return <Splash />
+}
 
-export default Index;
+export default Index

@@ -1,7 +1,8 @@
 const Endpoints = {
   login: '/auth/login',
-  register: '/auth/register',
   logout: '/auth/logout',
-};
+  createUser: '/user',
+  refreshToken: '/auth/refresh',
+}
 
-export default Endpoints;
+export default Endpoints

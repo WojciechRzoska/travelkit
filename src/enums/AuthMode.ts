@@ -3,4 +3,4 @@ const enum AuthMode {
   signUp = 'signUp',
 }
 
-export default AuthMode;
+export default AuthMode

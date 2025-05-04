@@ -1,8 +1,8 @@
-import { AuthState } from '@store/authStore/types/AuthState';
-import * as SecureStore from 'expo-secure-store';
-import { create } from 'zustand';
+import { AuthState } from '@store/authStore/types/AuthState'
+import * as SecureStore from 'expo-secure-store'
+import { create } from 'zustand'
 
-export const useAuth = create<AuthState>((set, get) => ({
+export const useAuth = create<AuthState>((set) => ({
   user: null,
   isAuthenticated: false,
   isAuthenticatedLoading: true,
@@ -11,8 +11,8 @@ export const useAuth = create<AuthState>((set, get) => ({
     set({ isAuthenticatedLoading: isLoading }),
   setUser: (user) => set({ user, isAuthenticated: true }),
   clear: async () => {
-    await SecureStore.deleteItemAsync('accessToken');
-    await SecureStore.deleteItemAsync('refreshToken');
-    set({ user: null, isAuthenticated: false });
+    await SecureStore.deleteItemAsync('accessToken')
+    await SecureStore.deleteItemAsync('refreshToken')
+    set({ user: null, isAuthenticated: false })
   },
-}));
+}))

@@ -1,45 +1,21 @@
-import js from "@eslint/js";
-import prettierPlugin from "eslint-plugin-prettier";
-import reactPlugin from "eslint-plugin-react";
-import reactNativePlugin from "eslint-plugin-react-native";
-import tseslint from "typescript-eslint";
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import tseslint from 'typescript-eslint'
 
-export default [
-  js.configs.recommended,
-  ...tseslint.config({
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.json"],
-        sourceType: "module",
-        ecmaVersion: "latest",
-      },
-    },
-  }),
+export default tseslint.config(
   {
-    ignores: ["package.json"], // 👈 This tells ESLint to skip this file
+    ignores: ['node_modules/*', 'dist/*', 'package.json', 'tsconfig.json'],
   },
+  tseslint.configs.recommended,
+  eslintPluginPrettierRecommended,
   {
-    files: ["**/*.{ts,tsx,js,jsx}"],
-    languageOptions: {
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        ecmaFeatures: { jsx: true },
-      },
-    },
-    plugins: {
-      react: reactPlugin,
-      "react-native": reactNativePlugin,
-      prettier: prettierPlugin,
-    },
     rules: {
-      "react-native/no-inline-styles": "off",
-      "prettier/prettier": ["error", { semi: false, singleQuote: true }],
-    },
-    settings: {
-      react: {
-        version: "detect",
-      },
+      '@typescript-eslint/ban-ts-comment': [
+        'error',
+        {
+          'ts-ignore': 'allow-with-description',
+          'ts-expect-error': 'allow-with-description',
+        },
+      ],
     },
   },
-];
+)

@@ -1,1 +1,1 @@
-export { default } from './InputController';
+export { default } from './InputController'

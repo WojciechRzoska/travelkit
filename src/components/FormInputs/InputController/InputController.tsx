@@ -1,14 +1,14 @@
-import { Input } from '@/lib/components/ui/input';
-import { FunctionComponent } from 'react';
-import { Controller, useFormContext } from 'react-hook-form';
-import { TextInputProps } from 'react-native';
+import { Input } from '@/lib/components/ui/input'
+import { FunctionComponent } from 'react'
+import { Controller, useFormContext } from 'react-hook-form'
+import { TextInputProps } from 'react-native'
 
 type Props = TextInputProps & {
-  fieldName: string;
-};
+  fieldName: string
+}
 
 const InputController: FunctionComponent<Props> = ({ fieldName, ...props }) => {
-  const { control } = useFormContext();
+  const { control } = useFormContext()
   return (
     <Controller
       name={fieldName}
@@ -24,7 +24,7 @@ const InputController: FunctionComponent<Props> = ({ fieldName, ...props }) => {
         />
       )}
     />
-  );
-};
+  )
+}
 
-export default InputController;
+export default InputController

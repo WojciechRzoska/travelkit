@@ -1,4 +1,4 @@
-import AuthMode from '@/src/enums/AuthMode';
+import AuthMode from '@/src/enums/AuthMode'
 
 const useGetAuthVersion = (authMode: AuthMode) => {
   const labels = {
@@ -14,9 +14,9 @@ const useGetAuthVersion = (authMode: AuthMode) => {
       linkText: 'Masz już konto?',
       redirectPath: '/signIn',
     },
-  } as const;
+  } as const
 
-  return labels[authMode];
-};
+  return labels[authMode]
+}
 
-export default useGetAuthVersion;
+export default useGetAuthVersion

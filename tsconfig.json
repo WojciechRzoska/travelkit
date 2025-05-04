@@ -8,6 +8,7 @@
       "@views/*": ["src/views/*"],
       "@store/*": ["src/store/*"],
       "@api/*": ["src/api/*"],
+      "@assets/*": ["assets/*"],
       "@/*": ["*"]
     }
   },

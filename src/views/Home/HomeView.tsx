@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React from 'react'
+import { Text, View } from 'react-native'
 
 const HomeView = () => {
   return (
@@ -12,7 +12,7 @@ const HomeView = () => {
     >
       <Text>Home </Text>
     </View>
-  );
-};
+  )
+}
 
-export default HomeView;
+export default HomeView
